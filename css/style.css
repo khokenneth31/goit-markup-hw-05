@@ -85,6 +85,11 @@ body {
 
 .header {
   padding: 24px 0 24px 0;
+  border-bottom: 1px solid var(--cornflower);
+  background: var(--white);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 nav {
@@ -137,6 +142,7 @@ nav {
 }
 .section-hero button:hover {
   background: var(--ocean);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .features-icon {
   align-items: center;
@@ -208,6 +214,7 @@ nav {
 .team-item-details {
   background-color: var(--white);
   padding: 32px 16px;
+  border-radius: 0, 0, 4px, 4px;
 }
 .social-media-item-details {
   display: inline-block;
@@ -228,6 +235,7 @@ nav {
 .team-list-item:hover {
   cursor: pointer;
   background-color: var(--ocean);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-list {
   display: flex;
@@ -290,6 +298,7 @@ nav {
 }
 .icon-clients-item-link {
   color: var(--lightslate);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-clients-item:hover .icon-clients-item-link {
   color: var(--ocean);
@@ -316,6 +325,7 @@ nav {
   width: 168px;
   height: 88px;
   fill: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-feature-title {
@@ -426,10 +436,12 @@ nav {
   width: 40px;
   background-color: var(--iris);
   border-radius: 100px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover {
   cursor: pointer;
   background-color: var(--green);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button-item {
@@ -528,6 +540,7 @@ nav {
   border-color: var(--ocean);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 nav {
   display: flex;
@@ -545,15 +558,20 @@ nav {
   color: var(--navyblue);
   font-size: 16px;
   position: relative;
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-list-item-link:hover::before {
+.nav-list-item-link::before {
   position: absolute;
   content: "";
-  width: 100%;
+  width: 0;
   height: 4px;
-  bottom: -28px;
+  bottom: -27px;
   border-radius: 2px;
   background: var(--ocean);
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-list-item:hover .nav-list-item-link::before {
+  width: 100%;
 }
 .nav-list-item :hover,
 .nav-list-item :focus {
