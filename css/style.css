@@ -281,6 +281,7 @@ nav {
   width: 40px;
   background-color: var(--iris);
   border-radius: 100px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-customer {
   padding: 120px 0 120px;
@@ -312,7 +313,7 @@ nav {
   border-radius: 4px;
   border: 1px solid var(--lightslate);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--lightslate);
+  fill: var(--lightslate);
 }
 
 .icon-clients-container {
@@ -427,6 +428,7 @@ nav {
   display: flex;
   align-items: center;
   column-gap: 16px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link {
   display: flex;
@@ -629,14 +631,14 @@ nav {
   color: var(--cornflower);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/*
 .close-icon {
   width: 24px;
   height: 24px;
   fill: currentColor;
   border-radius: 50%;
   border: 1px solid rgb(142, 143, 153, 0.5);
-}
+}*/
 .close-icon:hover,
 .close-icon:focus {
   cursor: pointer;
