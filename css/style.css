@@ -142,7 +142,7 @@ nav {
 }
 .section-hero button:hover {
   background: var(--ocean);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .features-icon {
   align-items: center;
@@ -235,7 +235,6 @@ nav {
 .team-list-item:hover {
   cursor: pointer;
   background-color: var(--ocean);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-list {
   display: flex;
@@ -281,7 +280,7 @@ nav {
   width: 40px;
   background-color: var(--iris);
   border-radius: 100px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-customer {
   padding: 120px 0 120px;
@@ -312,8 +311,7 @@ nav {
 .icon-clients-item {
   border-radius: 4px;
   border: 1px solid var(--lightslate);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: var(--lightslate);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-clients-container {
@@ -326,7 +324,7 @@ nav {
   width: 168px;
   height: 88px;
   fill: currentColor;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-feature-title {
@@ -428,7 +426,7 @@ nav {
   display: flex;
   align-items: center;
   column-gap: 16px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link {
   display: flex;
@@ -438,12 +436,11 @@ nav {
   width: 40px;
   background-color: var(--iris);
   border-radius: 100px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover {
   cursor: pointer;
   background-color: var(--green);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button-item {
@@ -542,7 +539,7 @@ nav {
   border-color: var(--ocean);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 nav {
   display: flex;
@@ -576,8 +573,9 @@ nav {
   width: 100%;
 }
 .nav-list-item :hover,
-.nav-list-item :focus {
+.nav-list-item-link:hover {
   color: var(--iris);
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list-item :active {
   color: var(--ocean);
@@ -624,7 +622,7 @@ nav {
   max-height: 100%;
   margin: 0 auto;
   border-radius: 4px;
-  padding: 40px;
+  padding: 0 40px;
   position: relative;
   background: var(--dairy);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -641,6 +639,7 @@ nav {
   cursor: pointer;
   display: flex;
   background-color: var(--cornflower);
+  color: var(--navyblue);
   justify-content: center;
   align-items: center;
   transition: background-color var(--transition-duration)
