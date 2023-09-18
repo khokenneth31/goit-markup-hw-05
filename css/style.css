@@ -19,6 +19,8 @@
   --navyblue-modal: rgba(46, 47, 66, 0.4);
   --lightgray: #f4f4fd;
   --dairy: #fcfcfc;
+  --transition-duration: 250ms;
+  --animation-timing-function: cubic-bezier(0, 0.76, 0.18, 1);
 }
 a {
   text-decoration: none;
@@ -139,10 +141,10 @@ nav {
   font-weight: 500;
   line-height: 24px;
   padding: 16px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-hero button:hover {
   background: var(--ocean);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .features-icon {
   align-items: center;
@@ -557,11 +559,12 @@ nav {
   color: var(--navyblue);
   font-size: 16px;
   position: relative;
-  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-list-item-link::before {
+.nav-list-item-link::after {
   position: absolute;
   content: "";
+  left: 0;
   width: 0;
   height: 4px;
   bottom: -28px;
@@ -569,35 +572,20 @@ nav {
   background: var(--ocean);
   transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-list-item:hover .nav-list-item-link::before {
+.nav-list-item-link:hover::after,
+.nav-list-item-link.active::after {
   width: 100%;
 }
-.nav-list-item :hover,
-.nav-list-item-link:hover {
+.nav-list-item-link.active {
+  color: var(--ocean);
+}
+.nav-list-item-link:hover,
+.nav-list-item-link:focus {
   color: var(--iris);
-  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-list-item :active {
+.nav-list-item-link:active {
   color: var(--ocean);
 }
-/*
-.nav-list-item-link::after {
-  content: "";
-  position: absolute;
-  background-color: var(--ocean);
-  height: 4px;
-  left: 0;
-}
-
-.nav-list-item:hover,
-.nav-list-item-link::after {
-  width: 100%;
-}
-.nav-list-item:hover,
-.nav-list-item-link {
-  color: var(--ocean);
-}
-*/
 /* modal window*/
 .backdrop {
   position: fixed;
@@ -642,13 +630,12 @@ nav {
   color: var(--navyblue);
   justify-content: center;
   align-items: center;
-  transition: background-color var(--transition-duration)
-      var(--animation-timing-function),
-    color var(--transition-duration) var(--animation-timing-function);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close .close-icon {
   fill: currentColor;
-  transition: fill var(--transition-duration) var(--animation-timing-function);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:hover {
   background-color: var(--ocean);
